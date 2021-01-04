@@ -9,7 +9,7 @@ declare release_version
 if bashio::config.has_value 'tag_commit_or_branch'; then
     release_version=$(bashio::config 'tag_commit_or_branch')
 else
-    release_version=${TAG_COMMIT_OR_BRANCH:-dev}
+    release_version=${TAG_COMMIT_OR_BRANCH:-master}
 fi
 
 if [[ $release_version == *":"* ]]; then
