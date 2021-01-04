@@ -11,12 +11,12 @@ if [ -n "${DATA_DIR}" ]; then
   echo ${DATA_DIR} > /var/run/s6/container_environment/DATA_DIR
 fi
 
-if [ -n "${HASS_TOKEN}" ]; then
-  echo ${HASS_TOKEN} > /var/run/s6/container_environment/HASS_TOKEN
+if [ -n "${HASSIO_TOKEN}" ]; then
+  echo ${HASSIO_TOKEN} > /var/run/s6/container_environment/HASSIO_TOKEN
 fi
 
-if [ -n "${HASS_URL}" ]; then
-  echo ${HASS_URL} > /var/run/s6/container_environment/HASS_URL
+if [ -n "${HASSIO_URL}" ]; then
+  echo ${HASSIO_URL} > /var/run/s6/container_environment/HASSIO_URL
 fi
 
 if [ -n "${VERBOSE}" ]; then

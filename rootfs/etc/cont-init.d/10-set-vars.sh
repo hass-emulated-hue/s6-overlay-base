@@ -13,11 +13,11 @@ if bashio::fs.file_exists '/data/options.json'; then
   fi
 
   if bashio::config.has_value 'token'; then
-      echo $(bashio::config 'token') > /var/run/s6/container_environment/HASS_TOKEN
+      echo $(bashio::config 'token') > /var/run/s6/container_environment/HASSIO_TOKEN
   fi
 
   if bashio::config.has_value 'url'; then
-      echo $(bashio::config 'url') > /var/run/s6/container_environment/HASS_URL
+      echo $(bashio::config 'url') > /var/run/s6/container_environment/HASSIO_URL
   fi
 
   if bashio::config.has_value 'verbose'; then
