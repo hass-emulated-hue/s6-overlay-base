@@ -23,9 +23,8 @@ fi
 full_url="https://github.com/${username}/core/archive/${ref}.tar.gz"
 bashio::log.info "Installing Emulated Hue version '${release_version}' (${full_url})..."
 curl -Lo /tmp/emulator.tar.gz "${full_url}"
-mkdir /tmp/emulator
+mkdir -p /tmp/emulator
 tar zxvf /tmp/emulator.tar.gz --strip 1 -C /tmp/emulator
-rm -rf /app/emulated_hue
-mv /tmp/emulator/emulated_hue /app/emulated_hue
+mv /tmp/emulator/emulated_hue .
 rm -rf /tmp/*
 bashio::log.info "Installed successfully!"
