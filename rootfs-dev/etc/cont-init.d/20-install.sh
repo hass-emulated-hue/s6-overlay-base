@@ -27,4 +27,5 @@ mkdir /tmp/emulator
 tar zxvf /tmp/emulator.tar.gz --strip 1 -C /tmp/emulator
 rm -rf /app/emulated_hue
 mv /tmp/emulator/emulated_hue /app/emulated_hue
+rm -rf /tmp/*
 bashio::log.info "Installed successfully!"
