@@ -15,8 +15,8 @@ if [ -n "${HASSIO_TOKEN}" ]; then
   echo ${HASSIO_TOKEN} > /var/run/s6/container_environment/HASSIO_TOKEN
 fi
 
-if [ -n "${HASSIO_URL}" ]; then
-  echo ${HASSIO_URL} > /var/run/s6/container_environment/HASSIO_URL
+if [ -n "${HASS_URL}" ]; then
+  echo ${HASS_URL} > /var/run/s6/container_environment/HASS_URL
 fi
 
 if [ -n "${VERBOSE}" ]; then

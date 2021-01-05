@@ -17,7 +17,7 @@ if bashio::fs.file_exists '/data/options.json'; then
   fi
 
   if bashio::config.has_value 'url'; then
-      echo $(bashio::config 'url') > /var/run/s6/container_environment/HASSIO_URL
+      echo $(bashio::config 'url') > /var/run/s6/container_environment/HASS_URL
   fi
 
   if bashio::config.has_value 'verbose'; then
