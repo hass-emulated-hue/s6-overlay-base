@@ -12,7 +12,7 @@ else
     release_version=${TAG_COMMIT_OR_BRANCH:-master}
 fi
 
-colon_count=$(tr -dc ',' <<<"$release_version" | awk '{ print length; }')
+colon_count=$(tr -dc ':' <<<"$release_version" | awk '{ print length; }')
 repo_name="core"
 
 if [[ "$colon_count" == 1 ]]; then
