@@ -26,7 +26,7 @@ if bashio::fs.file_exists '/data/options.json'; then
 fi
 
 if bashio::fs.file_exists '/scripts/20-install.sh'; then
-  bash /scripts/20-install.sh
+  exec /scripts/20-install.sh
 fi
 
 bashio::log.info "Starting Emulated Hue..."
