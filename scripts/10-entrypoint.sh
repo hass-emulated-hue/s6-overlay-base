@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bashio
 # ==============================================================================
 # Hass.io Addon: Emulated Hue
 # This file serves as the entrypoint for Emulated Hue
