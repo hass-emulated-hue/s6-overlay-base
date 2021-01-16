@@ -11,6 +11,14 @@ if bashio::fs.file_exists '/data/options.json'; then
       export DATA_DIR=$(bashio::config 'data')
   fi
 
+  if bashio::config.has_value 'http_port'; then
+      export HTTP_PORT=$(bashio::config 'http_port')
+  fi
+
+  if bashio::config.has_value 'https_port'; then
+      export HTTPS_PORT=$(bashio::config 'https_port')
+  fi
+
   if bashio::config.has_value 'token'; then
       export HASS_TOKEN=$(bashio::config 'token')
   fi
