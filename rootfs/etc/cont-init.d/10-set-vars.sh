@@ -12,6 +12,14 @@ if bashio::fs.file_exists '/data/options.json'; then
       echo $(bashio::config 'data') > /var/run/s6/container_environment/DATA_DIR
   fi
 
+  if bashio::config.has_value 'http_port'; then
+      echo $(bashio::config 'http_port') > /var/run/s6/container_environment/HTTP_PORT
+  fi
+
+  if bashio::config.has_value 'https_port'; then
+      echo $(bashio::config 'https_port') > /var/run/s6/container_environment/HTTPS_PORT
+  fi
+
   if bashio::config.has_value 'token'; then
       echo $(bashio::config 'token') > /var/run/s6/container_environment/HASS_TOKEN
   fi
