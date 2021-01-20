@@ -2,7 +2,7 @@
 # ==============================================================================
 # Community Hass.io Add-ons: Emulated Hue
 # This file defines environment variables based on user specified config options
-# This prioritizes options.json over native environment variables
+# This overrides native environment variables with options.json 
 # ==============================================================================
 
 
