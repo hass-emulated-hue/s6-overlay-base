@@ -28,6 +28,10 @@ if bashio::fs.file_exists '/data/options.json'; then
       echo $(bashio::config 'url') > /var/run/s6/container_environment/HASS_URL
   fi
 
+  if bashio::config.has_value 'use_default_ports_for_discovery'; then
+      echo $(bashio::config 'url') > /var/run/s6/container_environment/USE_DEFAULT_PORTS
+  fi
+
   if bashio::config.has_value 'verbose'; then
       echo $(bashio::config 'verbose') > /var/run/s6/container_environment/VERBOSE
   fi
